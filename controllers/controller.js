@@ -81,7 +81,8 @@ router.get("/images", function(req, res) {
 
 router.get("/images/:id", function(req, res) {
 
-	ESPN.findOne({ "_id": req.params.id})
+	console.log(req.params.id);
+	// ESPN.findOne({ "_id": req.params.id})
 })
 
 

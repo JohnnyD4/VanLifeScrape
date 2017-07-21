@@ -10,7 +10,7 @@ $.getJSON("/images", function(data) {
 
 })
 
-$(document).on("click", "div", function() {
+$(document).on("click", "#img", function() {
 	var thisId = $(this).attr("data-id");
 
 	$.ajax({
