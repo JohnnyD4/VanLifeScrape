@@ -30,7 +30,7 @@ app.engine("handlebars", exphbs({defaultLayout: "main"}));
 
 app.set("view engine", "handlebars");
 
-mongoose.connect("mongodb://localhost/vanlife");
+mongoose.connect("mongodb://localhost/espnfc");
 
 var db = mongoose.connection;
 

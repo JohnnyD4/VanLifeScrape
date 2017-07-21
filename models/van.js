@@ -2,29 +2,26 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var vanSchema = new Schema ({
+var espnSchema = new Schema ({
 
 	title: {
 		type: String,
 		required: true
 	},
 
-	imgLink: {
+	imgSrc: {
 		type: String,
 		required: true
 	},
 
-	info: {
-		type: String,
-		required: true
-	},
-
-	comment: {
-		type: Schema.types.ObjectId,
-		ref: "Comment"
-	}
+	// comment: {
+	// 	type: Schema.types.ObjectId,
+	// 	ref: "Comment"
+	// }
 });
 
-var Van = mongoose.model("Van", vanSchema);
+var ESPN = mongoose.model("ESPN", espnSchema);
 
-module.exports = Van;
+module.exports = ESPN;
+
+// console.log("models");
