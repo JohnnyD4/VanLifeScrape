@@ -30,7 +30,7 @@ app.engine("handlebars", exphbs({defaultLayout: "main"}));
 
 app.set("view engine", "handlebars");
 
-mongoose.connect("mongodb://localhost/espnfc");
+mongoose.connect("mongodb://heroku_x052x65f:9g3qq7ql6ui6mu3vdltnovg5a1@ds015859.mlab.com:15859/heroku_x052x65f");
 
 var db = mongoose.connection;
 
