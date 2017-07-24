@@ -30,17 +30,20 @@ app.engine("handlebars", exphbs({defaultLayout: "main"}));
 
 app.set("view engine", "handlebars");
 
-mongoose.connect("mongodb://heroku_x052x65f:9g3qq7ql6ui6mu3vdltnovg5a1@ds015859.mlab.com:15859/heroku_x052x65f");
+var db = process.env.MONGODB_URI || "mongodb://localhost/espnfc";
 
-var db = mongoose.connection;
+mongoose.connect(db, function(error) {
 
-db.on("error", function(error) {
-	console.log("Mongoose error:", error);
+	if (error) {
+		throw err
+	} else {
+		console.log("connected to mongoose");
+	}
+
+	
 })
 
-db.once("open", function() {
-	console.log("Mongoose connection succesful");
-})
+
 
 app.listen(port, function(err) {
 	console.log(port);
