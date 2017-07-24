@@ -46,5 +46,5 @@ mongoose.connect(db, function(error) {
 
 
 app.listen(port, function(err) {
-	console.log(port);
+	console.log("log", port);
 })
