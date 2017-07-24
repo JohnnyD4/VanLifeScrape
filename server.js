@@ -16,7 +16,7 @@ mongoose.Promise = Promise;
 
 var app = express();
 
-var port = process.env.port || 3000;
+var PORT = process.env.PORT || 3000;
 
 app.use("/", routes);
 
@@ -45,6 +45,6 @@ mongoose.connect(db, function(error) {
 
 
 
-app.listen(port, function(err) {
-	console.log("log", port);
+app.listen(PORT, function(err) {
+	console.log("log", PORT);
 })
